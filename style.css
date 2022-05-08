@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+/*
+============================
+Root
+============================
+*/
+
+:root {
+  margin: 0px;
+
+  padding: 8vw 14vw 0vw 14vw;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+/*
+============================
+Container
+============================
+*/
+
+.container {
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-areas:
+    "main rating"
+    "reviews reviews";
+}
+
+/*
+============================
+Main
+============================
+*/
+
+.main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.main h1 {
+  font-size: 3rem;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  width: 50%;
+}
+
+.main p {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  width: 60%;
+}
+
+/*
+============================
+Rating
+============================
+*/
+
+.rating {
+  grid-area: rating;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.first-rating {
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.second-rating {
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.third-rating {
+  margin-left: 16%;
+}
+
+.first-rating,
+.second-rating,
+.third-rating {
+  background-color: hsl(300, 24%, 96%);
+  width: 450px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.first-rating p,
+.second-rating p,
+.third-rating p {
+  padding-left: 5rem;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+
+/*
+============================
+reviews
+============================
+*/
+
+.reviews {
+  grid-area: reviews;
+  min-width: 100%;
+  min-height: 50%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.reviews {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.reviews img {
+  border-radius: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.review-one,
+.review-two,
+.review-three {
+  line-height: 1.8;
+  color: hsl(300, 24%, 96%);
+  background-color: hsl(300, 43%, 22%);
+  padding: 2%;
+  min-height: 55%;
+  min-width: 23%;
+  border-radius: 10px;
+}
+
+.image-user p {
+  min-width: 100%;
+  line-height: 1;
+}
+
+.image-user {
+  display: flex;
+}
+
+.user {
+  font-weight: 700;
+}
+
+.name-verified {
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+.buyer {
+  font-weight: 400;
+  color: hsl(333, 80%, 67%);
+}
+
+.review-one {
+  align-self: start;
+}
+
+.review-two {
+  align-self: center;
+}
+
+.review-three {
+  align-self: end;
+}
+
+.review-one p {
+  width: 90%;
+}
+
+.review-two p {
+  width: 90%;
+}
+
+.review-three p {
+  width: 90%;
+}
+
+/*
+============================
+svg
+============================
+*/
+
+svg {
+  padding: 0px;
+  padding-top: 1rem;
+}
+
+svg:nth-child(1) {
+  padding-left: 2rem;
+}
+
+/*
+============================
+mobile view
+============================
+*/
+
+@media (max-width: 700px) {
+  :root {
+    padding: 10% 0px;
+    margin: 0px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 90vw;
+    height: 100vh;
+    grid-template-areas:
+      "main"
+      "rating"
+      "reviews";
+  }
+
+  .main h1,
+  .main p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .first-stars,
+  .second-stars,
+  .third-stars {
+    min-width: 140px;
+  }
+
+  .first-rating,
+  .second-rating,
+  .third-rating {
+    width: 100%;
+    margin: 2rem 0px;
+  }
+
+  .first-rating p,
+  .second-rating p,
+  .third-rating p {
+    padding-left: 1rem;
+  }
+
+  .reviews {
+    display: block;
+  }
+
+  .review-one,
+  .review-two,
+  .review-three {
+    margin-bottom: 2rem;
+  }
+}
